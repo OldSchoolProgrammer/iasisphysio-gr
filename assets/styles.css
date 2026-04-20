@@ -446,6 +446,11 @@ textarea {
   color: var(--muted);
 }
 
+.section.dark .section-heading .eyebrow {
+  background: rgba(195, 164, 79, 0.15);
+  color: #f8ddb1;
+}
+
 .section-heading {
   margin-bottom: 2rem;
   max-width: 70ch;
