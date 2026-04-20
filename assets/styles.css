@@ -166,7 +166,23 @@ textarea {
   cursor: pointer;
 }
 
+.lang-switch a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 0.55rem 0.9rem;
+}
+
 .lang-switch button.active {
+  background: var(--gold);
+  color: #171310;
+  font-weight: 700;
+}
+
+.lang-switch a.active {
   background: var(--gold);
   color: #171310;
   font-weight: 700;
@@ -226,6 +242,10 @@ textarea {
   color: var(--muted);
   font-size: 1.08rem;
   line-height: 1.75;
+}
+
+.page-hero p {
+  color: #efe4ca;
 }
 
 .hero-actions {
@@ -304,7 +324,7 @@ textarea {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(10, 10, 10, 0.05), rgba(10, 10, 10, 0.42));
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.24), rgba(10, 10, 10, 0.62));
 }
 
 .hero-floating {
@@ -357,10 +377,33 @@ textarea {
 .page-hero .container {
   position: relative;
   z-index: 1;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(13, 12, 13, 0.74), rgba(13, 12, 13, 0.48));
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
 }
 
 .page-hero .eyebrow {
   margin-bottom: 1rem;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: #efe4ca;
+  font-size: 0.92rem;
+}
+
+.breadcrumbs a {
+  color: #f8ddb1;
+}
+
+.breadcrumbs span[aria-hidden="true"] {
+  color: rgba(246, 242, 232, 0.72);
 }
 
 .section {
@@ -539,8 +582,8 @@ textarea {
   margin-bottom: 0.9rem;
   padding: 0.3rem 0.7rem;
   border-radius: 999px;
-  background: var(--gold-soft);
-  color: #6c5420;
+  background: rgba(195, 164, 79, 0.32);
+  color: #3f2f16;
   font-size: 0.82rem;
   font-weight: 700;
 }
@@ -586,7 +629,7 @@ textarea {
 }
 
 .form-panel {
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.94);
 }
 
 .form-grid {
@@ -681,6 +724,7 @@ textarea {
 .quote-card blockquote {
   margin: 0;
   font-size: 1.7rem;
+  color: var(--dark-text);
 }
 
 .quote-card cite {

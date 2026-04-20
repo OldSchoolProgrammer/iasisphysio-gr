@@ -4,6 +4,33 @@
       "maxDuration": 10
     }
   },
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/en/",
+      "permanent": false
+    },
+    {
+      "source": "/index.html",
+      "destination": "/en/",
+      "permanent": true
+    },
+    {
+      "source": "/clinic.html",
+      "destination": "/en/clinic.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/en/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/testimonials.html",
+      "destination": "/en/testimonials.html",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -28,6 +55,24 @@
         {
           "key": "Cache-Control",
           "value": "no-store"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/Photos/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
         }
       ]
     }
