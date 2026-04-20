@@ -207,6 +207,30 @@ textarea {
   font-weight: 700;
 }
 
+.header-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  white-space: nowrap;
+  transition: color 0.18s, border-color 0.18s;
+}
+
+.header-phone:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+.footer-icon-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
 .hero {
   background: linear-gradient(180deg, #111012 0%, #19171b 100%);
   color: var(--text);
@@ -944,5 +968,9 @@ textarea {
 
   .brand-mark span {
     font-size: 0.78rem;
+  }
+
+  .header-phone span {
+    display: none;
   }
 }
