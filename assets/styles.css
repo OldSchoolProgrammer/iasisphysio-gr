@@ -453,6 +453,8 @@ textarea {
 
 .section-heading .eyebrow {
   margin-bottom: 0.9rem;
+  background: rgba(195, 164, 79, 0.22);
+  color: #7a5c1e;
 }
 
 .section-heading h2 {
