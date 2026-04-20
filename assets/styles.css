@@ -225,24 +225,6 @@ textarea {
   border-color: var(--gold);
 }
 
-.header-cta {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.38rem 0.95rem;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #d4b15a 0%, #b9943f 100%);
-  color: #18120d;
-  font-size: 0.82rem;
-  font-weight: 700;
-  white-space: nowrap;
-  transition: opacity 0.18s, transform 0.18s;
-}
-
-.header-cta:hover {
-  opacity: 0.88;
-  transform: translateY(-1px);
-}
-
 .footer-icon-link {
   display: inline-flex;
   align-items: center;
@@ -989,10 +971,6 @@ textarea {
   }
 
   .header-phone span {
-    display: none;
-  }
-
-  .header-cta {
     display: none;
   }
 }
