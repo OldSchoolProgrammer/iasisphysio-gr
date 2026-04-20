@@ -53,7 +53,7 @@ textarea {
   min-height: 100vh;
   background:
     radial-gradient(circle at top right, rgba(195, 164, 79, 0.18), transparent 26%),
-    linear-gradient(180deg, #111012 0%, #19171b 18%, var(--paper) 18.01%, var(--paper) 100%);
+    var(--paper);
 }
 
 .container {
@@ -189,6 +189,7 @@ textarea {
 }
 
 .hero {
+  background: linear-gradient(180deg, #111012 0%, #19171b 100%);
   color: var(--text);
   padding: 4rem 0 5rem;
 }
