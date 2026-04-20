@@ -86,12 +86,13 @@ textarea {
 }
 
 .brand img {
-  width: 64px;
-  height: 64px;
+  width: 84px;
+  height: 84px;
   object-fit: cover;
   border-radius: 50%;
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
   background: #000;
+  box-shadow: 0 0 0 3px rgba(195, 164, 79, 0.18);
 }
 
 .brand-mark {
@@ -162,7 +163,8 @@ textarea {
   background: transparent;
   color: var(--muted);
   border-radius: 999px;
-  padding: 0.55rem 0.9rem;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.78rem;
   cursor: pointer;
 }
 
@@ -170,10 +172,11 @@ textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 44px;
+  min-width: 32px;
   color: var(--muted);
   border-radius: 999px;
-  padding: 0.55rem 0.9rem;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.78rem;
 }
 
 .lang-switch button.active {
@@ -919,8 +922,8 @@ textarea {
   }
 
   .brand img {
-    width: 54px;
-    height: 54px;
+    width: 68px;
+    height: 68px;
   }
 
   .brand-mark span {
