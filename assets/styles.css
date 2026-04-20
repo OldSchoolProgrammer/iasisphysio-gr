@@ -419,9 +419,29 @@ textarea {
   color: var(--text);
 }
 
+.section.dark .section-heading h2,
+.section.dark .feature-card strong,
+.section.dark .service-card strong,
+.section.dark .value-card strong,
+.section.dark .equipment-card strong,
+.section.dark .info-card strong,
+.section.dark .step-card strong,
+.section.dark .faq-item strong,
+.section.dark .team-card h3 {
+  color: var(--text);
+}
+
 .section.dark p,
 .section.dark li,
-.section.dark .section-heading p {
+.section.dark .section-heading p,
+.section.dark .feature-card p,
+.section.dark .service-card p,
+.section.dark .value-card p,
+.section.dark .equipment-card p,
+.section.dark .info-card p,
+.section.dark .step-card p,
+.section.dark .faq-item p,
+.section.dark .team-card p {
   color: var(--muted);
 }
 
@@ -474,7 +494,8 @@ textarea {
 .section.dark .step-card,
 .section.dark .quote-card,
 .section.dark .faq-item {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(195, 164, 79, 0.18);
 }
 
 .feature-card strong,
@@ -590,6 +611,7 @@ textarea {
 
 .section.dark .team-role {
   color: #f5dd9f;
+  background: rgba(195, 164, 79, 0.22);
 }
 
 .gallery-grid {
@@ -727,10 +749,18 @@ textarea {
   color: var(--dark-text);
 }
 
+.section.dark .quote-card blockquote {
+  color: var(--text);
+}
+
 .quote-card cite {
   font-style: normal;
   color: #6b6254;
   font-weight: 600;
+}
+
+.section.dark .quote-card cite {
+  color: var(--muted);
 }
 
 .faq-grid {
