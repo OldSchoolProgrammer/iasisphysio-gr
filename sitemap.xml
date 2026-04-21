@@ -2,50 +2,92 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.iasisphysio.gr/en/</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.iasisphysio.gr/en/" />
     <xhtml:link rel="alternate" hreflang="el" href="https://www.iasisphysio.gr/el/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.iasisphysio.gr/en/" />
   </url>
   <url>
     <loc>https://www.iasisphysio.gr/en/clinic.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.iasisphysio.gr/en/clinic.html" />
     <xhtml:link rel="alternate" hreflang="el" href="https://www.iasisphysio.gr/el/clinic.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.iasisphysio.gr/en/clinic.html" />
   </url>
   <url>
     <loc>https://www.iasisphysio.gr/en/contact.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.iasisphysio.gr/en/contact.html" />
     <xhtml:link rel="alternate" hreflang="el" href="https://www.iasisphysio.gr/el/contact.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.iasisphysio.gr/en/contact.html" />
   </url>
   <url>
     <loc>https://www.iasisphysio.gr/en/testimonials.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.iasisphysio.gr/en/testimonials.html" />
     <xhtml:link rel="alternate" hreflang="el" href="https://www.iasisphysio.gr/el/testimonials.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.iasisphysio.gr/en/testimonials.html" />
   </url>
   <url>
+    <loc>https://www.iasisphysio.gr/en/privacy.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iasisphysio.gr/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.iasisphysio.gr/el/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.iasisphysio.gr/en/privacy.html" />
+  </url>
+  <url>
     <loc>https://www.iasisphysio.gr/el/</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.iasisphysio.gr/en/" />
     <xhtml:link rel="alternate" hreflang="el" href="https://www.iasisphysio.gr/el/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.iasisphysio.gr/en/" />
   </url>
   <url>
     <loc>https://www.iasisphysio.gr/el/clinic.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.iasisphysio.gr/en/clinic.html" />
     <xhtml:link rel="alternate" hreflang="el" href="https://www.iasisphysio.gr/el/clinic.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.iasisphysio.gr/en/clinic.html" />
   </url>
   <url>
     <loc>https://www.iasisphysio.gr/el/contact.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.iasisphysio.gr/en/contact.html" />
     <xhtml:link rel="alternate" hreflang="el" href="https://www.iasisphysio.gr/el/contact.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.iasisphysio.gr/en/contact.html" />
   </url>
   <url>
     <loc>https://www.iasisphysio.gr/el/testimonials.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.iasisphysio.gr/en/testimonials.html" />
     <xhtml:link rel="alternate" hreflang="el" href="https://www.iasisphysio.gr/el/testimonials.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.iasisphysio.gr/en/testimonials.html" />
+  </url>
+  <url>
+    <loc>https://www.iasisphysio.gr/el/privacy.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iasisphysio.gr/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.iasisphysio.gr/el/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.iasisphysio.gr/en/privacy.html" />
   </url>
 </urlset>
