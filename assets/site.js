@@ -3,6 +3,86 @@ const runtimeConfig = {
   contactEnabled: false,
 };
 
+function initCarousels() {
+  document.querySelectorAll(".clinic-carousel").forEach(function (carousel) {
+    const slides = Array.from(carousel.querySelectorAll(".carousel-slide"));
+    const dots = Array.from(carousel.querySelectorAll(".carousel-dot"));
+    const prevBtn = carousel.querySelector(".carousel-prev");
+    const nextBtn = carousel.querySelector(".carousel-next");
+    const counter = carousel.querySelector(".carousel-current");
+    const progressBar = carousel.querySelector(".carousel-progress-bar");
+    const INTERVAL = 5000;
+    let current = 0;
+    let autoTimer = null;
+
+    function goTo(index) {
+      slides[current].classList.remove("active");
+      dots[current].classList.remove("active");
+      dots[current].setAttribute("aria-selected", "false");
+      current = ((index % slides.length) + slides.length) % slides.length;
+      slides[current].classList.add("active");
+      dots[current].classList.add("active");
+      dots[current].setAttribute("aria-selected", "true");
+      if (counter) counter.textContent = String(current + 1);
+    }
+
+    function resetProgress() {
+      if (!progressBar) return;
+      progressBar.style.transition = "none";
+      progressBar.style.width = "0%";
+      void progressBar.offsetWidth;
+      progressBar.style.transition = "width " + INTERVAL + "ms linear";
+      progressBar.style.width = "100%";
+    }
+
+    function stopAuto() {
+      clearInterval(autoTimer);
+      autoTimer = null;
+      if (progressBar) {
+        progressBar.style.transition = "none";
+        progressBar.style.width = "0%";
+      }
+    }
+
+    function startAuto() {
+      stopAuto();
+      resetProgress();
+      autoTimer = setInterval(function () {
+        goTo(current + 1);
+        resetProgress();
+      }, INTERVAL);
+    }
+
+    if (prevBtn) prevBtn.addEventListener("click", function () { stopAuto(); goTo(current - 1); startAuto(); });
+    if (nextBtn) nextBtn.addEventListener("click", function () { stopAuto(); goTo(current + 1); startAuto(); });
+
+    dots.forEach(function (dot, i) {
+      dot.addEventListener("click", function () { stopAuto(); goTo(i); startAuto(); });
+    });
+
+    carousel.addEventListener("mouseenter", stopAuto);
+    carousel.addEventListener("mouseleave", startAuto);
+    carousel.addEventListener("focusin", stopAuto);
+    carousel.addEventListener("focusout", function (e) {
+      if (!carousel.contains(e.relatedTarget)) startAuto();
+    });
+
+    let touchStartX = 0;
+    carousel.addEventListener("touchstart", function (e) { touchStartX = e.touches[0].clientX; }, { passive: true });
+    carousel.addEventListener("touchend", function (e) {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 40) { stopAuto(); goTo(dx < 0 ? current + 1 : current - 1); startAuto(); }
+    }, { passive: true });
+
+    carousel.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") { e.preventDefault(); stopAuto(); goTo(current - 1); startAuto(); }
+      if (e.key === "ArrowRight") { e.preventDefault(); stopAuto(); goTo(current + 1); startAuto(); }
+    });
+
+    startAuto();
+  });
+}
+
 function attachEvents() {
   const menuToggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".nav");
@@ -21,6 +101,8 @@ function attachEvents() {
       }
     });
   });
+
+  initCarousels();
 
   const form = document.querySelector("#appointment-form");
   if (form) {

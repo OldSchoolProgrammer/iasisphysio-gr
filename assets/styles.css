@@ -1007,3 +1007,170 @@ textarea {
     display: none;
   }
 }
+
+/* ---- Clinic Carousel ---- */
+.clinic-carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  background: #0d0c0d;
+  min-height: 520px;
+  user-select: none;
+}
+
+.carousel-track {
+  position: absolute;
+  inset: 0;
+}
+
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.85s ease;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0.12) 45%, transparent 72%);
+  pointer-events: none;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 3.75rem;
+  left: 1.75rem;
+  right: 5rem;
+  z-index: 2;
+  color: rgba(246, 242, 232, 0.68);
+  font-size: 0.84rem;
+  font-style: italic;
+  letter-spacing: 0.03em;
+  pointer-events: none;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid rgba(195, 164, 79, 0.38);
+  background: rgba(13, 12, 13, 0.62);
+  color: var(--gold);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.carousel-btn:hover,
+.carousel-btn:focus-visible {
+  background: rgba(195, 164, 79, 0.2);
+  border-color: var(--gold);
+  transform: translateY(-50%) scale(1.1);
+  outline: none;
+}
+
+.carousel-prev {
+  left: 1rem;
+}
+
+.carousel-next {
+  right: 1rem;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  display: flex;
+  gap: 0.45rem;
+  align-items: center;
+}
+
+.carousel-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 99px;
+  border: none;
+  padding: 0;
+  background: rgba(246, 242, 232, 0.28);
+  cursor: pointer;
+  transition:
+    background 0.25s,
+    width 0.25s,
+    transform 0.25s;
+}
+
+.carousel-dot.active {
+  background: var(--gold);
+  width: 22px;
+}
+
+.carousel-counter {
+  position: absolute;
+  bottom: 1.2rem;
+  right: 1.5rem;
+  z-index: 4;
+  color: rgba(246, 242, 232, 0.42);
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+}
+
+.carousel-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 5;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.carousel-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold), #e8c878);
+  width: 0%;
+}
+
+@media (max-width: 720px) {
+  .clinic-carousel {
+    min-height: 300px;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-caption {
+    font-size: 0.8rem;
+    bottom: 3rem;
+  }
+}
